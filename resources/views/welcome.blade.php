@@ -31,9 +31,9 @@
       <td>{{$student->class}}</td>
       <td>{{$student->attendence_status}}</td>
       <td>
-        <a href="#" title="edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> 
+        <a class="btn btn-raised btn-info btn-sm" title="edit" href="{{route('edit', $student->id)}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> 
         || 
-        <a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a>
+        <a href="#" class="btn btn-raised btn-danger btn-sm"><i class="fa fa-trash" aria-hidden="true"></i></a>
       <td>
     </tr>
     @endforeach
