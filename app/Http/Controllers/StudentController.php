@@ -112,8 +112,10 @@ class StudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete($id)
     {
-        //
+       Students::find($id)->delete();
+       return redirect(route('index'))->with('Msg', 'Student record is deleted successfully');
+
     }
 }
